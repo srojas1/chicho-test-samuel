@@ -2,12 +2,26 @@
 
 namespace App;
 
+use App\Interfaces\CarrierInterface;
 
-class Contact
+class Contact implements CarrierInterface
 {
-	
 	function __construct()
 	{
-		# code...
+		#code ...
+	}
+
+	public function dialContact(Contact $contact)
+	{
+		return true;
+	}
+
+	public function makeCall()
+	{
+		return true;
+	}
+
+	public function getContact() {
+
 	}
 }
