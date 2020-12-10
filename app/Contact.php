@@ -20,8 +20,4 @@ class Contact implements CarrierInterface
 	{
 		return true;
 	}
-
-	public function getContact() {
-
-	}
 }
