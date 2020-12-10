@@ -6,8 +6,7 @@ use App\Interfaces\CarrierInterface;
 use App\Services\ContactService;
 
 
-class Mobile
-{
+class Mobile {
 
 	protected $provider;
 
@@ -33,6 +32,17 @@ class Mobile
 		$contact = ContactService::getContact($name);
 
 		return $contact;
+	}
+
+	public function sendSMS($number, $body) {
+		$result = false;
+		$number = ContactService::validateNumber($number);
+
+		if($number && !empty($body)) {
+			$result = $this->provider->sendSMS();
+		}
+
+		return $result;
 	}
 
 }

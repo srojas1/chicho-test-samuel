@@ -20,6 +20,10 @@ class Call implements CarrierInterface
 
 	public function dialContact(Contact $contact)
 	{
-		//
+		return true;
+	}
+
+	public function sendSMS() {
+		return true;
 	}
 }
