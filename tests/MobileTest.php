@@ -37,6 +37,7 @@ class MobileTest extends TestCase
 
 		$this->assertFalse($mobile->getContact(''));
 		$this->assertTrue($mobile->getContact('test'));
+		$this->assertNotEmpty($mobile->getContact('test'));
 	}
 
 	/** @test */
